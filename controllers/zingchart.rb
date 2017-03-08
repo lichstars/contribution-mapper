@@ -8,11 +8,11 @@ class ZingChart
 	def create(details_h, master_h)
 		charts = Hash.new
 		details_h.each do |item|
-			details_h = master_h.clone
+			temp = master_h.clone
 			title = get_title(item[0])
 			authors = item[1]
-			authors.each { |author, value| details_h[author] = value }			
-			charts[title] = make_series(details_h)
+			authors.each { |author, value| temp[author] = value }			
+			charts[title] = make_series(temp)
 		end
 		return charts
 	end

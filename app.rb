@@ -1,25 +1,30 @@
 require 'sinatra'
 require 'json'
-require './parser'
-require './zingchart'
+require './controllers/parser'
+# require './controllers/zingchart'
+require './controllers/googlechart'
 
 get '/' do
 	# parse a local git repository
-	git_parser = Parser.new('nlopes:slack.git')
+	git_parser = Parser.new('data/nlopes:slack.git')
 	git_parser.parse
 
 	@filename = git_parser.filename
 		
-	# create zingchart objects
-	zingchart = ZingChart.new
+	# zing charts
+	# zingchart = ZingChart.new
+	# @plot = zingchart.plot	
+	# @breakdown = zingchart.create(git_parser.details_h, git_parser.master_h)
+	# @authors = zingchart.get_authors(git_parser.authors_h)
 
-	@plot = zingchart.plot	
 
-	@breakdown = zingchart.create(git_parser.details_h, git_parser.master_h)
+	# google charts
+	googlechart = GoogleChart.new
+	@breakdown = googlechart.create(git_parser.details_h, git_parser.master_h)
+	@authors = git_parser.authors_h.to_a
 
-	@authors = zingchart.get_authors(git_parser.authors_h)
 
-	@ranking = zingchart.rank_authors(git_parser.authors_h)
+	@ranking = git_parser.authors_h.sort_by { |name, value| value }.reverse
 
 	erb :main
 end

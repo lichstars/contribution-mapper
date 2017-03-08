@@ -1,12 +1,18 @@
 
 <h1 class="text-center"><%= @filename %></h1>
 
-<div class="row">
-	<div class="col-md-12" id="authors"></div>
-	<script>	
-		var authors = {"type": 'pie',"plot": <%= @plot.to_json %>,"title": {"text":"","font-size":10},"series": <%= @authors.to_json %>};
-		zingchart.render({id: "authors",width: "100%",height: 300, data: authors});
-	</script>
+<div class="row">	
+	<div class="col-md-12" style="width: 100%; height: 300px;" id="authors"></div>
+	<script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([['author', 'contributions'], <% @authors.each do | author | %><%= author %>,<% end %>]);
+      	var options = {legend: 'none', pieSliceText: 'label', title: '', pieStartAngle: 100, };
+        var chart = new google.visualization.PieChart(document.getElementById('authors'));
+        chart.draw(data, options);
+      }
+    </script> 
 </div>
 
 <div class="row">
@@ -23,13 +29,42 @@
 <div class="container-fluid">
 	<h1 class="text-center">Breakdown</h1>
     <div class="row">
-        <% @breakdown.each_with_index do |(k, v), index| %>
-			<div class="col-md-1" id="chart<%=index%>"></div>
-			<script>	
-				var chart_data = {"type": 'pie',"plot": <%= @plot.to_json %>,"title": <%= k.to_json %>,"series": <%= v.to_json %>};
-				zingchart.render({id: "chart<%=index%>",width: "100%",height: 160,data: chart_data});
-			</script>
+        <% @breakdown.each_with_index do | (title, author_details), index | %>
+        	<div class="col-md-1" style="width: 150px; height: 160px;" id="chart<%=index%>"></div>
+        	<script type="text/javascript">
+		      google.charts.load("current", {packages:["corechart"]});
+		      google.charts.setOnLoadCallback(drawChart);
+		      function drawChart() {
+		        var data = google.visualization.arrayToDataTable([['author', 'contributions'], <% author_details.each do | author | %><%= author %>,<% end %>]);
+		      	var options = {legend: 'none', pieSliceText: 'label', title: '<%= title %>', pieStartAngle: 100, };
+		        var chart = new google.visualization.PieChart(document.getElementById('chart<%=index%>'));
+		        chart.draw(data, options);
+		      }
+		    </script>
+
 		<% end %>
     </div>
 </div>
 
+<!-- zingchart -->
+<!-- 
+   	<div class="col-md-12" id="authors"></div>
+	<script>	
+		var authors = {"type": 'pie',"plot": <%= @plot.to_json %>,"title": {"text":"","font-size":10},"series": <%= @authors.to_json %>};
+		zingchart.render({id: "authors",width: "100%",height: 300, data: authors});
+	</script> 
+
+	 
+	<div class="container-fluid">
+		<h1 class="text-center">Breakdown</h1>
+	    <div class="row">
+	        <% @breakdown.each_with_index do |(k, v), index| %>
+				<div class="col-md-1" id="chart<%=index%>"></div>
+				<script>	
+					var chart_data = {"type": 'pie',"plot": <%= @plot.to_json %>,"title": <%= k.to_json %>,"series": <%= v.to_json %>};
+					zingchart.render({id: "chart<%=index%>",width: "100%",height: 160,data: chart_data});
+				</script>
+			<% end %>
+	    </div>
+	</div>
+ -->
