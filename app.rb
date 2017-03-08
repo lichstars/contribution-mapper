@@ -17,7 +17,6 @@ get '/' do
 	# @breakdown = zingchart.create(git_parser.details_h, git_parser.master_h)
 	# @authors = zingchart.get_authors(git_parser.authors_h)
 
-
 	# google charts
 	googlechart = GoogleChart.new
 	@breakdown = googlechart.create(git_parser.details_h, git_parser.master_h)
