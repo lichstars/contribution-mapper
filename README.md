@@ -11,3 +11,8 @@ Contributions are welcomed. You can fork a repository, add your code changes to 
 ## Bug Reporting
 
 Please use the [Issues](https://github.com/lichstars/contribution-mapper/issues) page to report bugs or suggest new enhancements.
+
+## License
+
+Contribution Mapper has been published under [GNU GENERAL PUBLIC LICENSE License](
+https://github.com/lichstars/contribution-mapper/blob/master/LICENSE)
