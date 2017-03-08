@@ -2,7 +2,7 @@
 
 ## Description
 
-A sinatra application that uses zingcharts to graphically map repository contributions per file by parsing git blame results.
+A sinatra application that uses google charts to graphically map repository contributions per file by parsing git blame results. 
 
 ## Contributing
 
