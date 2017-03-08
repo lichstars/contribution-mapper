@@ -1,0 +1,35 @@
+
+<h1 class="text-center"><%= @filename %></h1>
+
+<div class="row">
+	<div class="col-md-12" id="authors"></div>
+	<script>	
+		var authors = {"type": 'pie',"plot": <%= @plot.to_json %>,"title": {"text":"","font-size":10},"series": <%= @authors.to_json %>};
+		zingchart.render({id: "authors",width: "100%",height: 300, data: authors});
+	</script>
+</div>
+
+<div class="row">
+	<h1 class="text-center">Top 10 Contributors</h1>
+    <h4 id="rank" class="text-center">		
+		<% @ranking[0..9].each_with_index do |(name, value), rank| %>		
+		<ul><%= rank + 1 %>. <%= name %>: <%= value %>%</ul>
+		<% end %>
+    </h4>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="container-fluid">
+	<h1 class="text-center">Breakdown</h1>
+    <div class="row">
+        <% @breakdown.each_with_index do |(k, v), index| %>
+			<div class="col-md-1" id="chart<%=index%>"></div>
+			<script>	
+				var chart_data = {"type": 'pie',"plot": <%= @plot.to_json %>,"title": <%= k.to_json %>,"series": <%= v.to_json %>};
+				zingchart.render({id: "chart<%=index%>",width: "100%",height: 160,data: chart_data});
+			</script>
+		<% end %>
+    </div>
+</div>
+

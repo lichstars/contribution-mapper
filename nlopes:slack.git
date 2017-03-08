@@ -1,0 +1,61 @@
+README.md: 35 Max McDonnell 26 Norberto Lopes 12 Alexandre Bourget 2 178inaba 1 Joe Fitzgerald
+TODO.txt: 3 Norberto Lopes
+admin.go: 107 Kris Hicks 51 Joe Fitzgerald 24 Brad Harris 8 Norberto Lopes
+attachments.go: 40 David Palm 29 Joe Fitzgerald 6 Mikhail Salosin 3 saxsir
+backoff.go: 54 Alexandre Bourget 3 Michael Stewart
+bots.go: 43 Mihai Parparita 1 Alexander Krasnukhin
+bots_test.go: 51 Mihai Parparita
+channels.go: 233 Norberto Lopes 15 Alexandre Bourget 13 Joe Fitzgerald
+chat.go: 110 Norberto Lopes 27 Obaied 11 Wiwiweb 7 Joe Fitzgerald 5 Mikhail Salosin 5 Alexandre Bourget 4 dojineko 2 m.furudate
+comment.go: 10 Joe Fitzgerald
+conversation.go: 34 Joe Fitzgerald 3 Norberto Lopes
+conversation_test.go: 200 Joe Fitzgerald
+dnd.go: 123 Norberto Lopes
+dnd_test.go: 159 Norberto Lopes
+emoji.go: 25 Norberto Lopes 2 Alexandre Bourget
+emoji_test.go: 40 Norberto Lopes
+files.go: 224 Norberto Lopes 29 David Palm 8 Joe Fitzgerald 7 Alexandre Bourget 6 Michal Gebauer
+groups.go: 250 Norberto Lopes 17 Alexandre Bourget 15 Joe Fitzgerald 11 Robert Wachs
+history.go: 36 Norberto Lopes
+im.go: 114 Norberto Lopes 9 Joe Fitzgerald 7 Alexandre Bourget
+info.go: 158 Norberto Lopes 23 Joe Fitzgerald 10 Marc Falzon 8 Alexandre Bourget 7 Serge Voilokov 3 Mihai Parparita 1 Michael Stewart
+item.go: 60 Ryan Carver 9 Joe Fitzgerald 6 Norberto Lopes
+item_test.go: 107 Ryan Carver 18 Joe Fitzgerald
+messageID.go: 30 Michael Stewart
+messages.go: 72 Joe Fitzgerald 38 Norberto Lopes 12 Mike Brevoort 4 Alexandre Bourget 3 Mihai Parparita 2 Michael Stewart
+messages_test.go: 755 Joe Fitzgerald
+misc.go: 90 Norberto Lopes 21 Al Tobey 12 Alexandre Bourget 11 Kris Hicks 4 Daisuke Maki 1 Michael Stewart 1 David L. Parsley
+misc_test.go: 82 Norberto Lopes 3 Alexandre Bourget
+oauth.go: 30 John Boiles 21 Norberto Lopes 2 Niko Bellic 2 Joe Fitzgerald 1 Alexandre Bourget
+output.txt:
+pagination.go: 20 Norberto Lopes
+pins.go: 79 Norberto Lopes
+pins_test.go: 224 Norberto Lopes 7 Mihai Parparita
+reactions.go: 206 Ryan Carver 32 Joe Fitzgerald 8 Norberto Lopes
+reactions_test.go: 367 Ryan Carver 7 Mihai Parparita 2 Joe Fitzgerald
+rtm.go: 37 Alexandre Bourget 1 Norberto Lopes 1 Michael Stewart
+search.go: 125 Norberto Lopes 9 Alexandre Bourget 3 Joe Fitzgerald
+slack.go: 47 Norberto Lopes 24 Alexandre Bourget 9 David L. Parsley 4 Florin Patan 3 Joe Fitzgerald 1 Kris Hicks
+slack_test.go: 22 Norberto Lopes
+stars.go: 129 Norberto Lopes 5 Joe Fitzgerald 1 Alexandre Bourget
+stars_test.go: 205 Norberto Lopes 48 Ryan Carver 7 Mihai Parparita
+team.go: 73 Eric Westfall 46 mehmetalisavas 41 Damara
+team_test.go: 116 Eric Westfall 55 mehmetalisavas
+test.xml:
+users.go: 124 Norberto Lopes 49 Brad Harris 7 Joe Fitzgerald 6 Alexandre Bourget 2 Mike Brevoort 1 Kristoffer Berdal 1 Dhaivat Pandit 1 Alexander Krasnukhin
+users_test.go: 78 Brad Harris
+websocket.go: 44 Alexandre Bourget 26 Michael Stewart 19 Norberto Lopes 3 Tarrant 1 David L. Parsley
+websocket_channels.go: 36 Norberto Lopes 17 Joe Fitzgerald 12 David Palm 4 Pavel Kiselev 3 Michael Stewart
+websocket_dm.go: 12 Norberto Lopes 11 Joe Fitzgerald
+websocket_dnd.go: 8 Norberto Lopes
+websocket_files.go: 26 Norberto Lopes 20 Joe Fitzgerald 3 David Palm
+websocket_groups.go: 20 Joe Fitzgerald 17 Norberto Lopes 12 Michael Stewart
+websocket_internals.go: 60 Michael Stewart 20 Alexandre Bourget 12 Norberto Lopes
+websocket_managed_conn.go: 261 Michael Stewart 132 Alexandre Bourget 26 Norberto Lopes 17 Francisco Claude 2 Masaki Fujimoto 1 Prashanth Sadasivan 1 James Lawrence
+websocket_misc.go: 57 Norberto Lopes 22 Joe Fitzgerald 15 Alexandre Bourget 10 Michael Stewart 7 David Palm 6 Masaki Fujimoto
+websocket_pins.go: 10 Norberto Lopes 6 David Palm
+websocket_proxy.go: 83 Alexandre Bourget
+websocket_reactions.go: 12 Norberto Lopes 9 Matt Drollette 4 Joe Fitzgerald
+websocket_stars.go: 6 Norberto Lopes 4 Joe Fitzgerald 4 David Palm
+websocket_teams.go: 23 Norberto Lopes 6 Joe Fitzgerald 4 David Palm
+websocket_utils.go: 19 Alexandre Bourget 1 Norberto Lopes
