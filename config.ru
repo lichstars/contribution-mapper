@@ -1,2 +1,5 @@
 require './app'
-run Sinatra::Application
+
+map "/" do 
+	run ContributionMapper
+end
